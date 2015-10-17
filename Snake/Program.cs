@@ -20,6 +20,18 @@ namespace Snake
             p2.sym = '#';
             p2.Draw();
 
+            List<Point> pointList = new List<Point>();
+            pointList.Add(p2);
+            pointList.Add(new Point(1,1,'e'));
+            pointList.Add(new Point(1, 2, 'w'));
+            pointList.Add(new Point(1, 3, 'q'));
+            pointList.Add(p1);
+
+            foreach (var point in pointList)
+            {
+              point.Draw();  
+            }
+
             Console.ReadLine();
         }
 

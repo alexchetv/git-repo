@@ -32,6 +32,10 @@ namespace Snake
               point.Draw();  
             }
 
+            HorizontalLine myLine = new HorizontalLine(1, 24, 2,'+');
+            myLine.Draw();
+            new HorizontalLine(1, 24, 3, '-').Draw();
+
             Console.ReadLine();
         }
 

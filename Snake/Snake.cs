@@ -67,5 +67,20 @@ namespace Snake
 
 
         }
+
+        public bool Eat(Point food)
+        {
+            Point newHead = GetNewHead();
+            if (newHead.HitPoint(food))
+            {
+                food.sym = newHead.sym;
+                pointList.Add(food);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

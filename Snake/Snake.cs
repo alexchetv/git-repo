@@ -71,7 +71,7 @@ namespace Snake
         public bool Eat(Point food)
         {
             Point newHead = GetNewHead();
-            if (newHead.HitPoint(food))
+            if (newHead.IsHit(food))
             {
                 food.sym = newHead.sym;
                 pointList.Add(food);
@@ -81,6 +81,16 @@ namespace Snake
             {
                 return false;
             }
+        }
+
+        public bool IsHitTail()
+        {
+            Point head = pointList.Last();
+            for (int i = 0; i < pointList.Count-2; i++)
+            {
+                if (pointList[i].IsHit(head)) return true;
+            }
+            return false;
         }
     }
 }

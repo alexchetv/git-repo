@@ -47,7 +47,7 @@ namespace Snake
             if (d == Direction.DOWN) y += step;
         }
 
-        public bool HitPoint(Point point)
+        public bool IsHit(Point point)
         {
             return x == point.x && y == point.y;
         }

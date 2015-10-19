@@ -10,10 +10,9 @@ namespace Snake
     {
         public override void Draw()
         {
-            ConsoleColor color = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Blue;
             base.Draw();
-            Console.ForegroundColor = color;
+            Console.ResetColor();
         }
     }
 }
